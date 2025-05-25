@@ -6,7 +6,7 @@ sequenceDiagram
     %% 1 – INITIAL PAGE REQUEST
     browser->>server: GET /exampleapp/spa
     activate server
-    server-->>browser: 201 Created <br/>HTML document
+    server-->>browser: 200 OK <br/>HTML document
     deactivate server
 
     %% 2 – STATIC ASSETS FOR THE SPA SHELL
