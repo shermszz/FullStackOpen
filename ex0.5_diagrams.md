@@ -26,8 +26,8 @@ sequenceDiagram
     activate server
     server-->>browser: JSON array of notes
     deactivate server
-
+```
     %% 4 – RENDER
     Note over browser: JavaScript callback<br/>renders the notes list on the page
 
-    ```
+    
