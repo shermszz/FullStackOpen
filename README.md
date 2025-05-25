@@ -9,5 +9,4 @@ This repository contains **my solutions for Part 0 (exercises 0.4 – 0.6)** of 
 | 0.5 | `ex0.5_diagrams.md` | **Loading the SPA shell** |
 | 0.6 | `ex0.6_diagrams.md` | **Saving a note inside the SPA** |
 
-Each file is a **GitHub-flavoured Markdown** document containing a Mermaid diagram that visualises the client–server message flow.
 
