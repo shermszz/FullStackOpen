@@ -25,9 +25,10 @@ sequenceDiagram
     browser->>server: GET /exampleapp/data.json
     activate server
     server-->>browser: JSON array of notes
+    Note over browser: JavaScript callback<br/>renders the notes list on the page
     deactivate server
 ```
-    %% 4 – RENDER
-    Note over browser: JavaScript callback<br/>renders the notes list on the page
+   
+    
 
     

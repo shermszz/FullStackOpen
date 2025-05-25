@@ -35,6 +35,7 @@ sequenceDiagram
     browser->>server: GET /exampleapp/data.json
     activate server
     server-->>browser: Updated JSON (includes new note)
+    Note over browser: Callback updates the DOM
     deactivate server
 ```
-    Note over browser: Callback updates the DOM
+    
