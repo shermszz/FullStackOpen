@@ -15,13 +15,13 @@ sequenceDiagram
     server-->>browser: main.css
     deactivate server
 
-    browser->>server: GET /exampleapp/main.js
+    browser->>server: GET /exampleapp/spa.js
     activate server
-    server-->>browser: main.js
+    server-->>browser: spa.js
     deactivate server
 
     %% 3 – SPA BOOTSTRAP: FETCH DATA
-    Note right of browser: main.js runs immediately<br/>and asks the server for notes
+    Note right of browser: spa.js runs immediately<br/>and asks the server for notes
     browser->>server: GET /exampleapp/data.json
     activate server
     server-->>browser: JSON array of notes
