@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -35,5 +36,5 @@ sequenceDiagram
     activate server
     server-->>browser: Updated JSON (includes new note)
     deactivate server
-
+```
     Note over browser: Callback updates the DOM
