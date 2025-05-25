@@ -14,6 +14,6 @@ sequenceDiagram
     deactivate server
 
     %% 2 – CLIENT-SIDE UPDATE
-    Note over browser: main.js adds the returned<br/>note to local state and re-renders<br/>the list <br/> There is no page reload
+    Note over browser: spa.js adds the returned<br/>note to local state and re-renders<br/>the list <br/> There is no page reload
 
 ```
