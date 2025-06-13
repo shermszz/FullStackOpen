@@ -1,30 +1,3 @@
-The Original code looks as such:
-const App = () => {
-  const course = 'Half Stack application development'
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
-
-  return (
-    <div>
-      <h1>{course}</h1>
-      <p>
-        {part1} {exercises1}
-      </p>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
-    </div>
-  )
-}
-
-export default App
-
 In my ex1.1.jsx file, I have refactored the original code so that it consists of 3 new components, namely a Header, Content, and Total child components of the App component. 
+
+In my ex1.2.jsx file, I have refactored the Content component further by breaking it down into separate Part components, one for each course part. I utilised the map() function to make the rendering of data in the parts array more dynamic  
