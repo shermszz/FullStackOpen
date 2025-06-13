@@ -9,5 +9,6 @@ This repository contains **my solutions for Part 0, Part 1 (exercises 0.4 – 0.
 | 0.5 | `ex0.5_diagrams.md` | **Loading the SPA shell** |
 | 0.6 | `ex0.6_diagrams.md` | **Saving a note inside the SPA** |
 | 1.1 | `ex1.1.jsx` |**Refactored code to consist of 3 new components, Single Source of Truth Principle** |
+| 1.2 | `ex1.2.jsx` |**Refactored the Content component further by breaking it down into separate Part components** |
 
 
