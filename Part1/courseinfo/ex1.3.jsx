@@ -1,5 +1,3 @@
-import { useDeferredValue } from "react"
-
 const App = () => {
   const course = 'Half Stack application development'
 
