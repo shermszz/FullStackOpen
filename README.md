@@ -1,7 +1,7 @@
 # Full Stack Open  
 Fundamentals of Web Apps
 
-This repository contains **my solutions for Part 0, Part 1 (exercises 0.4 – 0.6, 1.1)** of the Full Stack Open course offered by the University of Helsinki.
+This repository contains **my solutions for Part 0, Part 1 (exercises 0.4 – 0.6, 1.1 - 1.2)** of the Full Stack Open course offered by the University of Helsinki.
 
 | Exercise | File | Topic |
 |---------:|---------------------------|--------------------------------------------------------------|
