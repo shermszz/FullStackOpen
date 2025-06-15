@@ -37,6 +37,16 @@ This folder contains my solutions to exercises 1.12 to 1.14 of the [Full Stack O
 
 ---
 
+---
+
+## Technologies Used
+
+- React (via Vite)
+- JavaScript (ES6+)
+- HTML
+
+---
+
 ## Key Learnings
 
 - Managing arrays in React state using `useState`.
