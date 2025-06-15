@@ -42,11 +42,11 @@ The app then displays:
 
 ---
 
-## Key Learnings
+## 📘 Key Learnings
 
-- Component-Based Design: Learned how to decompose a UI into reusable, functional components like Button, StatisticLine, and Statistics.
-- React State Management: Used the useState hook to track user interactions and feedback counts in real-time.
-- Conditional Rendering: Applied logic to display different content (e.g. “No feedback given”) based on state conditions.
-- State-Driven Calculations: Calculated derived values like average and positive percentage based on current state.
-- Prop Passing & Reusability: Passed data and functions down to child components using props to keep the app modular and maintainable.
-- HTML Semantics & Layout: Leveraged semantic tags like <table>, <tbody>, <tr>, and <td> for better structure and layout clarity in displaying data.
+- **Component-Based Design**: Learned how to decompose a UI into reusable, functional components like `Button`, `StatisticLine`, and `Statistics`.
+- **Props and Data Flow**: Passed data from parent to child components using props to render dynamic content.
+- **Array Rendering**: Used `.map()` to iterate over arrays and render multiple components efficiently.
+- **JSX Syntax**: Practiced embedding expressions within JSX using `{}` and combining HTML-like elements with JavaScript.
+- **State-Free Logic**: Focused on data structuring and rendering logic without `useState`, emphasizing the fundamentals of component behavior.
+- **HTML Semantics & Layout**: Used semantic elements like `<table>`, `<tbody>`, `<tr>`, and `<td>` to present structured data clearly and improve accessibility and layout.
