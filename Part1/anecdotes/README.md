@@ -1,4 +1,4 @@
-# Anecdotes App – Full Stack Open (Exercises 1.12–1.14)
+# 📘 Anecdotes App – Full Stack Open (Exercises 1.12–1.14)
 
 This folder contains my solutions to exercises 1.12 to 1.14 of the [Full Stack Open](https://fullstackopen.com/en/part1) course offered by the University of Helsinki. The application randomly displays software engineering anecdotes and allows users to vote for their favorite ones.
 
