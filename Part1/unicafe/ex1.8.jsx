@@ -65,15 +65,12 @@ const App = () => {
 
   const incrementGood = () => {
     setGood(good + 1)
-    
   }
   const incrementNeutral = () => {
     setNeutral(neutral + 1)
-    
   }
   const incrementBad = () => {
-    setBad(bad + 1)
-    
+    setBad(bad + 1) 
   }
 
   return (
