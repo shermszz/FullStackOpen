@@ -1,80 +1,63 @@
 import { useState } from 'react'
 
-const Button = ({onClick, text}) => 
-    <button onClick={onClick}>
-        {text}
-    </button>
-
-const Feedback = () => <h1>give feedback</h1>
-
-//Using Statistics as its own component
-const Statistics = (props) => {
-    if (props.all === 0) {
-        return (
-          <div>
-            <h1>statistics</h1>
-            <p>No feedback given</p>
-          </div>
-            
-        )
-    }
-    //Instead of using Average and Posiotive Components,
-    //we can calculate the average and positive percentage directly in the Statistics component
-    const average = (props.good - props.bad) / props.all
-    const positivePercentage = (props.good / props.all) * 100
-    return (
-        <div>
-        <h1>statistics</h1>
-        <StatisticLine text='good' value={props.good} />
-            <StatisticLine text='neutral' value={props.neutral} />
-            <StatisticLine text='bad' value={props.bad} />
-            <StatisticLine text='all' value={props.all}/>
-            <StatisticLine text='average' value={average} />
-            <StatisticLine text='positive' value={`${positivePercentage}%`} />
-        </div>
-    )
-} 
-
-//Renaming Score to StatisticLine 
-const StatisticLine = ({text, value}) => {
+const Button = ({ onClick, text }) => {
   return (
-    <p>
-      {text} {value}
-    </p>
+    <button onClick={onClick}>
+      {text}
+    </button>
   )
 }
-// Removed Average and Positive components as they are now integrated into Statistics
+
+//Added a Header component to display the title of each section
+const Header = ({text}) => {
+  return (
+    <h1>{text}</h1>
+  )
+}
 
 const App = () => {
-  // save clicks of each button to its own state
-  const [good, setGood] = useState(0)
-  const [neutral, setNeutral] = useState(0)
-  const [bad, setBad] = useState(0)
-  //Remove the useState for all compared to Ex1.7
-  const all = good + neutral + bad
+  const anecdotes = [
+    'If it hurts, do it more often.',
+    'Adding manpower to a late software project makes it later!',
+    'The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.',
+    'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.',
+    'Premature optimization is the root of all evil.',
+    'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.',
+    'Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients.',
+    'The only way to go fast, is to go well.'
+  ]
+   
+  const [selected, setSelected] = useState(0)
+  const [votes, setVotes] = useState(Array(anecdotes.length).fill(0))
 
-  const incrementGood = () => {
-    setGood(good + 1)
-    
+  const getRandomIndex = () => {
+    const randomIndex = Math.floor(Math.random() * anecdotes.length)
+    setSelected(randomIndex)
   }
-  const incrementNeutral = () => {
-    setNeutral(neutral + 1)
-    
+
+  const vote = () => {
+    const updatedVotes = [...votes]
+    updatedVotes[selected] += 1
+    setVotes(updatedVotes)
   }
-  const incrementBad = () => {
-    setBad(bad + 1)
-    
-  }
+
+  //First, we find among all the votes, which one has the highest value
+  const maxVotes = Math.max(...votes)
+  //Next, we find the index within the votes array that matches the maxVotes
+  //This index will match the index of the actual anecdote with the most votes
+  const anecdoteWithMostVotes = votes.indexOf(maxVotes)
 
   return (
     <div>
-        <Feedback />
-        <Button onClick={incrementGood} text='good'/>
-        <Button onClick={incrementNeutral} text='neutral'/>
-        <Button onClick={incrementBad} text='bad'/>
+      <Header text='Anecdote of the day' />
+      <p>{anecdotes[selected]}</p>
+      <p>has {votes[selected]} votes</p>
+      <Button onClick={vote} text='vote' />
+      <Button onClick={getRandomIndex} text='next anecdote' />
 
-        <Statistics good={good} neutral={neutral} bad={bad} all={all}/>
-        
+      <Header text='Anecdote with most votes' />
+      <p>{anecdotes[anecdoteWithMostVotes]}</p>
+      <p>has {maxVotes} votes</p>
     </div>
   )
 }
