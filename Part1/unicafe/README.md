@@ -1,4 +1,4 @@
-# 📊 Unicafe Feedback App (Exercises 1.6 – 1.11)
+# 📘 Unicafe Feedback App (Exercises 1.6 – 1.11)
 
 This is a simple React application built as part of the [Full Stack Open](https://fullstackopen.com/en/part1) course offered by the University of Helsinki. It simulates a feedback system for a fictional university café called **Unicafe**. The app demonstrates fundamental React concepts such as component decomposition, state handling, conditional rendering, and rendering structured data using HTML tables.
 
@@ -42,8 +42,11 @@ The app then displays:
 
 ---
 
-## How to Run
+## Key Learnings
 
-```bash
-npm install
-npm run dev
+- Component-Based Design: Learned how to decompose a UI into reusable, functional components like Button, StatisticLine, and Statistics.
+- React State Management: Used the useState hook to track user interactions and feedback counts in real-time.
+- Conditional Rendering: Applied logic to display different content (e.g. “No feedback given”) based on state conditions.
+- State-Driven Calculations: Calculated derived values like average and positive percentage based on current state.
+- Prop Passing & Reusability: Passed data and functions down to child components using props to keep the app modular and maintainable.
+- HTML Semantics & Layout: Leveraged semantic tags like <table>, <tbody>, <tr>, and <td> for better structure and layout clarity in displaying data.
