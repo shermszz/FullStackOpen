@@ -37,9 +37,9 @@ Displays a course’s:
 
 ## Key Learnings
 
-- JSX Basics: Understood how HTML-like syntax (JSX) integrates with JavaScript inside React components.
-- Component Decomposition: Learned to break down UI into smaller components like Header, Content, and Total to improve modularity and readability.
-- Prop Passing: Gained experience passing data from parent to child components using props to ensure clean data flow.
-- Using JavaScript in JSX: Practiced embedding expressions and variables directly inside JSX.
-- Data Structures in React: Learned to manage and structure component data using JavaScript objects and arrays.
-- Dynamic Rendering: Used `map()` to dynamically render multiple parts, enabling scalability without hardcoding.
+- **JSX Basics**: Understood how HTML-like syntax (JSX) integrates with JavaScript inside React components.
+- **Component Decomposition**: Learned to break down UI into smaller components like Header, Content, and Total to improve modularity and readability.
+- **Prop Passing**: Gained experience passing data from parent to child components using props to ensure clean data flow.
+- **Using JavaScript in JSX**: Practiced embedding expressions and variables directly inside JSX.
+- **Data Structures in React**: Learned to manage and structure component data using JavaScript objects and arrays.
+- **Dynamic Rendering:** Used `map()` to dynamically render multiple parts, enabling scalability without hardcoding.
