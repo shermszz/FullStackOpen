@@ -1,6 +1,6 @@
 # 📊 Unicafe Feedback App (Exercises 1.6 – 1.11)
 
-This is a simple React application built as part of the [Full Stack Open](https://fullstackopen.com/en/) course offered by the University of Helsinki. It simulates a feedback system for a fictional university café called **Unicafe**. The app demonstrates fundamental React concepts such as component decomposition, state handling, conditional rendering, and rendering structured data using HTML tables.
+This is a simple React application built as part of the [Full Stack Open](https://fullstackopen.com/en/part1) course offered by the University of Helsinki. It simulates a feedback system for a fictional university café called **Unicafe**. The app demonstrates fundamental React concepts such as component decomposition, state handling, conditional rendering, and rendering structured data using HTML tables.
 
 ---
 
