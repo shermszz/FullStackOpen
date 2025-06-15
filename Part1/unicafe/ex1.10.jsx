@@ -55,15 +55,12 @@ const App = () => {
 
   const incrementGood = () => {
     setGood(good + 1)
-    
   }
   const incrementNeutral = () => {
     setNeutral(neutral + 1)
-    
   }
   const incrementBad = () => {
     setBad(bad + 1)
-    
   }
 
   return (
@@ -72,7 +69,6 @@ const App = () => {
         <Button onClick={incrementGood} text='good'/>
         <Button onClick={incrementNeutral} text='neutral'/>
         <Button onClick={incrementBad} text='bad'/>
-
         <Statistics good={good} neutral={neutral} bad={bad} all={all}/>
         
     </div>
