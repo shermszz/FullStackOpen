@@ -14,7 +14,7 @@ const App = () => {
     
   const personExists = (name) => persons.some(person => person.name === name)
 
-  const addName = (event) => { // Takes in an event because we are handling a form submissio
+  const addPerson = (event) => { // Takes in an event because we are handling a form submissio
     event.preventDefault()
     if (personExists(newName)) {
       alert(`${newName} is already added to phonebook`)
@@ -43,7 +43,7 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      <form onSubmit={addName}>
+      <form onSubmit={addPerson}>
         <div>
           name: <input value={newName} onChange={handleNameChange} />
         </div>
