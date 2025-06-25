@@ -14,6 +14,7 @@ const App = () => {
   const [newNumber, setNewNumber] = useState('')
   const [searchName, setSearchName] = useState('')
   const [notification, setNotification] = useState(null)
+  const [error, setErrorMessage] = useState(null)
 
   useEffect(() => {
     personServices.getAll()
@@ -49,6 +50,11 @@ const App = () => {
             setPersons(persons.map(person => person.id === existingPerson.id ? newData : person))
             setNewName('')
             setNewNumber('')
+          })
+          .catch(error => {
+            console.log("An error occured when you tried to add something")
+            setErrorMessage('Information of ' + `${newName}` + ' has already been removed from server')
+            setTimeout(() => setErrorMessage(null), 3000)
           })
       }
       return // Exit the function if the name already exists
@@ -112,7 +118,8 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
-      <Notification message={notification} />
+      <Notification message={notification} type="ok" />
+      <Notification message={error} type="error" />
       <div>
         <Filter searchName={searchName} handleSearchChange={handleSearchChange} />
       </div>
