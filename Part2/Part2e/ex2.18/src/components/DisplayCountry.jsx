@@ -10,10 +10,10 @@ const DisplayCountry = ({ foundCountry }) => {
 
             <h1>Languages</h1>
             <ul>
-                {Object.values(foundCountry.languages).map(languages => <li>{languages}</li>)}
+                {Object.values(foundCountry.languages).map(languages => <li key={languages}>{languages}</li>)}
             </ul>
             <img src={foundCountry.flags.png} alt={foundCountry.flags.alt}/>
-           
+            
          </div>
     )
 }
