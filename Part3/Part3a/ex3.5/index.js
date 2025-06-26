@@ -84,7 +84,7 @@ app.post('/api/persons', (request, response) => {
     }
 
     persons = persons.concat(newPerson)  // Update the persons array
-    response.json(newPerson)  // Send back just the new person
+    response.json(persons)  //Send back updated persons array
 })
 
 
