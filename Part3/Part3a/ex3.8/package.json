@@ -1,0 +1,20 @@
+{
+  "name": "ex3.8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specifed \" && exit 1"
+  },
+  "author": "Sherman Tan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
