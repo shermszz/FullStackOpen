@@ -81,3 +81,4 @@ To run locally:
    ```
 
 The frontend will run on port 5173 and the backend on port 3001.
+
