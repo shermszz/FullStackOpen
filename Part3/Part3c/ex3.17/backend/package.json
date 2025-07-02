@@ -1,0 +1,24 @@
+{
+  "name": "ex3.17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specifed \" && exit 1",
+    "build:ui": "rm -rf dist && cd ../frontend/ && npm run build && cp -r dist ../backend",
+    "copyToRenderBackendDeployment": "rm -rf ../../../../../RenderBackendDeployment/dist && cp -r dist ../../../../../RenderBackendDeployment/"
+  },
+  "author": "Sherman Tan",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
