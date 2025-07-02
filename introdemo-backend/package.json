@@ -6,12 +6,14 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "test": "echo \"Error: no test specifed \" && exit 1"
+    "test": "echo \"Error: no test specifed \" && exit 1",
+    "build:ui": "rm -rf dist && cd ../introdemo-frontend && npm run build && cp -r dist ../introdemo-backend",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "Sherman Tan",
   "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1"
   }
 }

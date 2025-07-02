@@ -20,6 +20,7 @@ node_modules/
 /dist
 
 # Misc
+.env
 .env.local
 .env.development.local``
 .env.test.local

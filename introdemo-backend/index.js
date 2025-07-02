@@ -1,9 +1,6 @@
 const express = require('express')
 const app = express()
 
-const cors = require('cors')
-app.use(cors()) //This will allow request from ANY origin if we use cors()
-
 let notes = [
   {
     id: '1',
