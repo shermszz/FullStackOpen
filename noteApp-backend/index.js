@@ -4,9 +4,6 @@ const Note = require('./models/note')
 
 const app = express()
 
-
-let notes = []
-
 const requestLogger = (request, response, next) => {
   console.log('Method:', request.method)
   console.log('Path:  ', request.path)
@@ -38,10 +35,10 @@ app.get('/api/notes/:id', (request, response, next) => {
       response.status(404).end()
     }
   })
-  .catch(error => next(error))
+    .catch(error => next(error))
 })
 
-app.post('/api/notes', (request, response) => {
+app.post('/api/notes', (request, response, next) => {
   console.log('Post request got called')
   const body = request.body
 
@@ -54,13 +51,13 @@ app.post('/api/notes', (request, response) => {
   const note = new Note({
     content: body.content,
     important: body.important || false,
-    id: generateId(),
   })
 
   note.save().then(savedNote => {
     console.log('note successfully saved in MongoDB')
     response.json(savedNote)
   })
+    .catch(error => next(error))
 })
 
 app.delete('/api/notes/:id', (request, response, next) => {
@@ -68,7 +65,7 @@ app.delete('/api/notes/:id', (request, response, next) => {
     console.log('Deleting this note: ', result)
     response.status(204).end()
   })
-  .catch(error => next(error))
+    .catch(error => next(error))
 })
 
 app.put('/api/notes/:id', (request, response, next) => {
@@ -98,9 +95,12 @@ app.use(unknownEndpoint)
 
 const errorHandler = (error, request, response, next) => {
   console.log(error.message)
-  
+
   if(error.name === 'CastError') {
-    return response.status(400).send({error: 'malformatted id'})
+    return response.status(400).send({ error: 'malformatted id' })
+  }
+  else if (error.name === 'ValidationError') {
+    return response.status(400).send({ error: error.message })
   }
   next(error)
 }

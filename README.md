@@ -1,6 +1,6 @@
 # 📚 Full Stack Open  
-**Fundamentals of Web Apps (Parts 0, 1 & 2)**  
-This repository contains my solutions to **Parts 0, 1, and 2** of the [Full Stack Open](https://fullstackopen.com/en) course by the University of Helsinki. The exercises cover the fundamentals of modern web development using **React**, **JavaScript**, **component-based design principles**, and **server communication**.
+**Fundamentals of Web Apps (Parts 0, 1, 2 & 3)**  
+This repository contains my solutions to **Parts 0, 1, 2, and 3** of the [Full Stack Open](https://fullstackopen.com/en) course by the University of Helsinki. The exercises cover the fundamentals of modern web development using **React**, **JavaScript**, **Node.js**, **Express**, **MongoDB**, and **component-based design principles**.
 
 ---
 
@@ -99,6 +99,53 @@ This part focuses on rendering data collections, handling forms, communicating w
 
 ---
 
+### Part 3 – Programming a Server with NodeJS and Express
+
+This part focuses on implementing a backend server using Node.js and Express, connecting to MongoDB, and deploying a full-stack application.
+
+#### `Part3a/` (Exercises 3.1 – 3.8)
+
+| Exercise | Description |
+|----------|-------------|
+| 3.1      | Implement backend for phonebook with Express |
+| 3.2      | Implement info page showing request time and entry count |
+| 3.3      | Implement route for fetching single phonebook entry |
+| 3.4      | Implement functionality for deleting entries |
+| 3.5      | Add functionality for adding new entries |
+| 3.6      | Add error handling for invalid/duplicate entries |
+| 3.7      | Add morgan middleware for logging |
+| 3.8      | Configure morgan to log POST request data |
+
+#### `Part3b/` (Exercises 3.9 – 3.11)
+
+| Exercise | Description |
+|----------|-------------|
+| 3.9      | Connect frontend to backend |
+| 3.10     | Deploy backend to internet |
+| 3.11     | Deploy full stack app to internet |
+
+#### `Part3c/` (Exercises 3.12 – 3.18)
+
+| Exercise | Description |
+|----------|-------------|
+| 3.12     | Create command-line MongoDB database |
+| 3.13-14  | Change backend to use MongoDB |
+| 3.15     | Add delete functionality with database |
+| 3.16     | Add error handling middleware |
+| 3.17     | Add update functionality for phone numbers |
+| 3.18     | Enhance single person and info routes |
+
+#### `Part3d/` (Exercises 3.19 – 3.22)
+
+| Exercise | Description |
+|----------|-------------|
+| 3.19     | Add validation to prevent invalid numbers |
+| 3.20     | Add validation for name and number format |
+| 3.21     | Deploy database backend to production |
+| 3.22     | Add ESLint configuration for code quality |
+
+---
+
 ## Key Learnings
 
 - **JSX & Component Structure**: Built reusable components using React and passed data via props.
@@ -110,6 +157,10 @@ This part focuses on rendering data collections, handling forms, communicating w
 - **Error Handling**: Added user notifications and error messages for better UX.
 - **External APIs**: Integrated with REST Countries API and weather services.
 - **Module Structure**: Organized code into reusable services and components.
+- **Backend Development**: Built RESTful APIs using Node.js and Express.
+- **Database Integration**: Connected application to MongoDB using Mongoose.
+- **Deployment**: Deployed full-stack application to production using Render.
+- **Code Quality**: Implemented ESLint for consistent code style and error checking.
 
 ---
 
@@ -118,7 +169,12 @@ This part focuses on rendering data collections, handling forms, communicating w
 - React (via Vite)
 - JavaScript (ES6+)
 - HTML/CSS
+- Node.js
+- Express
+- MongoDB & Mongoose
 - Git & GitHub
 - JSON Server
 - Axios
 - REST APIs
+- ESLint
+- Render (Deployment)
