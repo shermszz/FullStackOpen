@@ -99,7 +99,7 @@ app.put('/api/persons/:id', (request, response, next) => {
   const {name, number} = request.body
   //findByIdAndUpdate(id, updateObject, options)
   //new: true returns the updated document instead of the original one
-  //runValidators: true runs the validators on the update operation
+  //runValidators: true runs the validators after the update operation
   Person.findByIdAndUpdate(request.params.id, { name, number },{ new: true, runValidators: true })
   .then(person => {
     if (!person) {
