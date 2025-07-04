@@ -1,9 +1,0 @@
-POST http://localhost:3001/api/blogs
-Content-Type: application/json
-
-{
-    "title": "Creating first Blog note",
-    "author": "Sherman",
-    "url": "www.fakeUrl.com",
-    "likes": 10
-}
