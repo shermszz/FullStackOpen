@@ -55,6 +55,7 @@ const App = () => {
             console.log("An error occured when you tried to add something")
             setErrorMessage('Information of ' + `${newName}` + ' has already been removed from server')
             setTimeout(() => setErrorMessage(null), 3000)
+            setPersons(persons.filter(p => p.id !== existingPerson.id))
           })
       }
       return // Exit the function if the name already exists
