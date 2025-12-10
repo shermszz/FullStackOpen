@@ -108,7 +108,11 @@ const App = () => {
       //Need to handle errors in case server crashes, or if I forgot to start the npm run server
       .catch(error => {
         console.log('Failed to delete because of --> ', error)
-        alert(`${name} could not be deleted`)
+        setErrorMessage(`${name} has already been deleted from the server`)
+        setTimeout(() => {
+          setErrorMessage(null)
+        }, 5000)
+        setPersons(persons.filter(p => p.id !== id))
       })
     }
     
