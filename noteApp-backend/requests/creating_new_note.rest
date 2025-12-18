@@ -1,7 +1,11 @@
 POST http://localhost:3001/api/notes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lIiwiaWQiOiI2OTQ0MTZhZDliMzM3NDA2MTNjZDQzNjEiLCJpYXQiOjE3NjYwNzc0NTB9.vv5F6Vk3ksLKIpy7bLSWUmS8Ut408etSXIklUYPhhRw
 
+//To get the Authorization token, you always need to send a POST request to login first to the desired user account
+//In this example, the username = 'me' and password = 'salmon'
+//Then, in Postman, it will generate the token and we use that to then create notes in the noteApp
 {
-    "content": "heh",
+    "content": "Testing the authentication token",
     "important": true
 }

@@ -1,6 +1,6 @@
 import globals from 'globals' //Provides global variables for different environments
 import js from '@eslint/js' //Core ESLint rules
-import stylisticJs from '@stylistic/eslint-plugin-js'
+import stylisticJs from '@stylistic/eslint-plugin'
 
 export default [
   //Use recommended JavaScript rules as base
