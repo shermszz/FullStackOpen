@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "CS21016",
+    "author": "Wong Weng Fart",
+    "url": "https://nusmods.com/courses/CS2106/introduction-to-operating-systems",
+    "likes": 4
+}
