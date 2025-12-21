@@ -1,6 +1,5 @@
 # 📚 Full Stack Open  
-**Fundamentals of Web Apps (Parts 0, 1, 2 & 3)**  
-This repository contains my solutions to **Parts 0, 1, 2, and 3** of the [Full Stack Open](https://fullstackopen.com/en) course by the University of Helsinki. The exercises cover the fundamentals of modern web development using **React**, **JavaScript**, **Node.js**, **Express**, **MongoDB**, and **component-based design principles**.
+**Fundamentals of Web Apps (Parts 0–4)** This repository contains my solutions to **Parts 0, 1, 2, 3, and 4** of the [Full Stack Open](https://fullstackopen.com/en) course by the University of Helsinki. The exercises cover the fundamentals of modern web development using **React**, **JavaScript**, **Node.js**, **Express**, **MongoDB**, **Jest**, and **component-based design principles**.
 
 ---
 
@@ -146,6 +145,50 @@ This part focuses on implementing a backend server using Node.js and Express, co
 
 ---
 
+### Part 4 – Testing Express Servers, User Administration
+
+This part focuses on automated testing, user authentication, and structuring backend applications for scalability. It includes unit testing with **Jest**, integration testing with **Supertest**, and implementing **Token-based Authentication**.
+
+#### `Part4a/` (Exercises 4.1 – 4.7)
+
+| Exercise | Description |
+|----------|-------------|
+| 4.1      | Initialise Blog List application structure |
+| 4.2      | Refactor app into modules (controllers, models, utils) |
+| 4.3      | Create dummy unit tests with Jest |
+| 4.4      | Implement `totalLikes` helper and unit tests |
+| 4.5      | Implement `favoriteBlog` helper and unit tests |
+| 4.6      | Implement `mostBlogs` author helper using Lodash |
+| 4.7      | Implement `mostLikes` author helper using Lodash |
+
+#### `Part4b/` (Exercises 4.8 – 4.14)
+
+| Exercise | Description |
+|----------|-------------|
+| 4.8      | Integration test for GET /api/blogs using Supertest |
+| 4.9      | Verify `id` property existence in JSON response |
+| 4.10     | Integration test for POST /api/blogs (creating new blog) |
+| 4.11     | Verify `likes` defaults to 0 if missing |
+| 4.12     | Verify 400 Bad Request if title/url missing |
+| 4.13     | Implement and test DELETE functionality |
+| 4.14     | Implement and test PUT (update) functionality |
+
+#### `Part4d/` (Exercises 4.15 – 4.23)
+
+| Exercise | Description |
+|----------|-------------|
+| 4.15     | Implement User model, controller, and password hashing |
+| 4.16     | Add validation for username/password length and uniqueness |
+| 4.17     | Link Blogs to Users (Population logic) |
+| 4.18     | Implement token-based login functionality |
+| 4.19     | Protect blog creation route (Token required) |
+| 4.20     | Refactor token extraction into middleware |
+| 4.21     | Ensure only the creator can delete a blog |
+| 4.22     | Implement user extraction middleware |
+| 4.23     | Finalize tests for token validation and missing headers |
+
+---
+
 ## Key Learnings
 
 - **JSX & Component Structure**: Built reusable components using React and passed data via props.
@@ -161,6 +204,9 @@ This part focuses on implementing a backend server using Node.js and Express, co
 - **Database Integration**: Connected application to MongoDB using Mongoose.
 - **Deployment**: Deployed full-stack application to production using Render.
 - **Code Quality**: Implemented ESLint for consistent code style and error checking.
+- **Backend Testing**: Wrote unit and integration tests using **Jest** and **Supertest** to automate API verification.
+- **Authentication**: Implemented secure password storage using **bcrypt** and token-based authentication using **JSON Web Tokens (JWT)**.
+- **Middleware**: Created custom middleware for request logging, error handling, and token/user extraction.
 
 ---
 
@@ -178,3 +224,7 @@ This part focuses on implementing a backend server using Node.js and Express, co
 - REST APIs
 - ESLint
 - Render (Deployment)
+- Jest (Testing Framework)
+- Supertest (HTTP Assertions)
+- Bcrypt (Password Hashing)
+- JSON Web Token (Authentication)
