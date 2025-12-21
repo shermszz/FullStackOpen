@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxhcyIsImlkIjoiNjk0NTY1MzRhYTVjYjU1MGNjZmQwOTg5IiwiaWF0IjoxNzY2MzAyNTE0fQ.16enUUhJniXCVVblGKdNdenDngDYVLCK2kheYidGvW4
+
+{
+    "title": "CS2100",
+    "author": "Aaron",
+    "url": "https://nusmods.com/courses/CS2100/computer-organisation",
+    "likes": 6
+}
