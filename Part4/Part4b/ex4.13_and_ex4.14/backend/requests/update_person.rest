@@ -1,0 +1,7 @@
+PUT http://localhost:3001/api/persons/693d2af7573c6b93701cb037
+Content-Type: application/json
+
+{
+    "name": "Adding from MSI computer 13 Dec 2025",
+    "number": "040-1234567"
+}
