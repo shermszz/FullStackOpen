@@ -1,0 +1,35 @@
+name: Deploment pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+job: 
+  simple-deployment-pipeline: # Name of the job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # Copy the code from repository
+      - uses: actions/setup-node@v4 # Set up Node to version 20
+        with:
+          node-version: '20'
+      - name: Install Dependencies
+        run: npm install # Install all required dependencies
+      
+      # Now check for code style errors
+      - name: Check style
+        run: npm run lint
+
+      # Run tests
+      - name: Run tests
+        env:
+          TEST_SECRET: ${{secrets.MY_SUPER_SECRET}}
+        run: |
+          echo "Setting up environment..."
+          CI=true npm test
+
+      # This step is to prove the secret is working
+      - name: Test Secret Injection
+        env: 
+          MY_SECRET = ${{secrets.MY_SUPER_SECRET}}  
+        run: echo "The secret is $MY_SECRET"
