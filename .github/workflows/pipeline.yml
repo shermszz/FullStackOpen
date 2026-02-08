@@ -9,9 +9,9 @@ jobs:
   simple-deployment-pipeline: # Name of the job
     runs-on: ubuntu-latest
 
-    #defaults:
-     # run:
-      #   working-directory: ./Part5/Part5b/ex5.5_and_ex5.6
+    defaults:
+      run:
+        working-directory: ./Part5/Part5b/ex5.5_and_ex5.6/bloglist-frontend
 
     steps:
       - uses: actions/checkout@v4 # Copy the code from repository
@@ -25,7 +25,6 @@ jobs:
       # --- DEBUGGING STEP END ---
 
       - name: Install Dependencies
-        working-directory: ./Part5/Part5b/ex5.5_and_ex5.6 
         run: npm install # Install all required dependencies
       
       # Now check for code style errors
