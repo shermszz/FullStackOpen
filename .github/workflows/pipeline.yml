@@ -1,4 +1,4 @@
-name: Deploment pipeline
+name: Deployment pipeline
 
 on:
   push:
@@ -9,16 +9,23 @@ jobs:
   simple-deployment-pipeline: # Name of the job
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./Part5/Part5b/ex5.5_and_ex5.6
+    #defaults:
+     # run:
+      #   working-directory: ./Part5/Part5b/ex5.5_and_ex5.6
 
     steps:
       - uses: actions/checkout@v4 # Copy the code from repository
       - uses: actions/setup-node@v4 # Set up Node to version 20
         with:
           node-version: '20'
+    
+# --- DEBUGGING STEP START ---
+      - name: Debug - List all files
+        run: ls -R
+      # --- DEBUGGING STEP END ---
+
       - name: Install Dependencies
+        working-directory: ./Part5/Part5b/ex5.5_and_ex5.6 
         run: npm install # Install all required dependencies
       
       # Now check for code style errors
