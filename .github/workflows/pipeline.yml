@@ -8,6 +8,11 @@ on:
 jobs: 
   simple-deployment-pipeline: # Name of the job
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./Part5/Part5b/ex5.5_and_ex5.6
+
     steps:
       - uses: actions/checkout@v4 # Copy the code from repository
       - uses: actions/setup-node@v4 # Set up Node to version 20
@@ -31,5 +36,5 @@ jobs:
       # This step is to prove the secret is working
       - name: Test Secret Injection
         env: 
-          MY_SECRET = ${{secrets.MY_SUPER_SECRET}}  
+          MY_SECRET: ${{secrets.MY_SUPER_SECRET}}  
         run: echo "The secret is $MY_SECRET"
