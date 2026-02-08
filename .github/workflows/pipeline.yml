@@ -1,4 +1,4 @@
-name: Deployment pipeline
+name: Backend pipeline
 
 on:
   push:
@@ -11,18 +11,13 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./Part5/Part5b/ex5.5_and_ex5.6/bloglist-frontend
+        working-directory: ./Part4/Part4c_d/ex4.22_and_ex4.23/backend
 
     steps:
       - uses: actions/checkout@v4 # Copy the code from repository
       - uses: actions/setup-node@v4 # Set up Node to version 20
         with:
           node-version: '20'
-    
-# --- DEBUGGING STEP START ---
-      - name: Debug - List all files
-        run: ls -R
-      # --- DEBUGGING STEP END ---
 
       - name: Install Dependencies
         run: npm install # Install all required dependencies
@@ -34,13 +29,6 @@ jobs:
       # Run tests
       - name: Run tests
         env:
-          TEST_SECRET: ${{secrets.MY_SUPER_SECRET}}
-        run: |
-          echo "Setting up environment..."
-          CI=true npm test
-
-      # This step is to prove the secret is working
-      - name: Test Secret Injection
-        env: 
-          MY_SECRET: ${{secrets.MY_SUPER_SECRET}}  
-        run: echo "The secret is $MY_SECRET"
+          TEST_MONGODB_URI: ${{secrets.TEST_MONGODB_URI}}
+          SECRET: ${{secrets.SECRET}}
+        run: npm run test
